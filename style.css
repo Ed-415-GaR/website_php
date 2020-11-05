@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+h1{
+    color: rgb(31, 30, 30);
+}
+h2{
+    font-size: 30px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+
+}
+
+ nav ul{         
+    display: inline-block;
+    list-style-type: none;          /*Tira os pontos da lista */
+}
+
+nav ul li{  
+    display: inline-block;          /*Coloca alinhado */
+    margin: 10px;                  
+    border-bottom: transparent solid 1px;
+    padding-bottom: 1px;
+    text-transform: uppercase;
+
+}
+
+
+ a.navegacao-bar {
+    color: #555;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    display: block;
+    padding: 16px 0;
+    margin: 0 12px;
+    letter-spacing: 1px;
+    font-size: 13.5px;
+    line-height: 5px;
+    font-weight: 900;
+    transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+    
+}
+ a.navegacao-bar::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #555;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: color 0.2s,transform 0.2s ease-out;     /*Tempo que a underline aparece e desaparece */
+ }
+
+ a.navegacao-bar:hover::before, a.navegacao-bar:focus::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+    
+} 
+
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.row-contacto{
+
+    display: flex;          /*Fica na horizontal*/
+    align-items: center;
+    justify-content: center;
+
+}
+
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+    
+}
+
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background: #1235ce;
+    color: white;
+    width: 150px;
+    height: 50px;
+    padding: 0px 25px;
+    margin: 15px 0;                 /*margem para o texto acima 15 -y  0-x*/
+    border-radius: 30px;
+    transition: background 0.5s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: #0c2590;
+
+}
+
+.header{
+    background: radial-gradient(#fff, #e9c0e9);
+}
+
+.header .row{
+    margin-top: 50px;
+}
+
+/*Projetos*/
+.header-projeto{
+background: white;   
+}
+.projeto-descricao h3{
+    color: #0c2590;
+    text-align: center;
+}
+.projeto-descricao p{
+    text-align: start;
+}
+
+
+.projetos-titulo{
+    text-align: center;
+    padding-top: 20px;
+    line-height: 50px;
+    color:black;
+    position: relative;
+}
+
+.projetos-titulo h2::after{
+    content: '';
+    background: #1235ce;
+    width: 90px;           /*Comprimento da linha*/
+    height: 5px;
+    border-radius: 5px;     /*bordas arredondadas*/
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.row-projeto{
+    display: flex;          /*Fica na horizontal*/
+    
+
+}
+
+.col-3-projeto{
+    flex-basis: 25%;
+    min-width: 10x;
+    margin-bottom: 30px;
+    margin: 50px;
+    margin-top: 100px;
+    padding: 15px;
+    transition: box-shadow 0.5s;
+}
+
+.col-3-projeto img{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: auto;
+    
+}
+
+.col-3-projeto:hover{
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+    
+    
+}
+
+
+.btn-projeto{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background: #1235ce;
+    color: white;
+    width: 125px;
+    height: 45px;                
+    border-radius: 30px;
+    transition: background 0.5s;
+    border: none;
+    cursor: pointer;
+
+}
+
+.btn-projeto:hover{
+    background: #0c2590;;
+}
+
+
+/*CONTACTO*/
+.header2{
+    background:rgb(49, 49, 63)
+}
+
+.contacto-titulo h2{
+    text-align: center;
+    padding-top: 20px;
+    line-height: 45px;
+    color:white;
+    position: relative;
+}
+
+.contacto-titulo h2::after{
+    content: '';
+    background: #7285db;
+    width: 90px;           /*Comprimento da linha*/
+    height: 5px;
+    border-radius: 5px;     /*bordas arredondadas*/
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contacto-formu{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-control{
+   
+    width: 800px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 0.7px solid rgb(206, 206, 206);
+    font-size: 16px;
+    margin-bottom: 20px;                        /*Espaçamento entre linhas*/
+    font-family: 'Poppins', sans-serif;
+    color:rgb(206, 206, 206);
+
+}
+.form-control:hover{
+    border-bottom: 0.7px solid #7285db;
+}
+
+.g-recaptcha{
+
+    margin-left: 522px;
+
+}
+
+.form-control-submit{
+    background: #1235ce;
+    border-radius: 30px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    margin-top: 50px;
+    height: 45px;
+    width: 800px;
+    color: white;
+    transition: background 0.5s;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+.form-control-submit:hover{
+    background: #0c2590;
+    /* background: rgb(8, 3, 87); */
+    cursor: pointer;
+}
+input{
+    height: 30px;
+}
+
+.contacto-rapido p{
+    color: white;
+}
+
+/*Contacto mais rápido*/
+.col-3{
+    
+    min-width: 10x;
+    margin-bottom: 30px;
+    transition: transform 0.5s;
+    margin: 10px;
+    margin-bottom: 40px;
+}
+
+.col-3 img{
+    
+    width: 40px;
+    height:auto;
+}
+
+.col-3:hover{
+    transform: translateY(-7%);
+    
+}
+
+.irtopo{
+    background: #282828
+}
+.irtopo img{
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30px;
+    height: auto;
+    transition: transform 0.5s;
+   
+}
+
+.irtopo img:hover{
+    transform: translateY(-4%);
+  
+}
+.rodape{
+    background: #1b1b1b;
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+    color: white;
+}
